@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Painel de Pedidos</title>
+
+</head>
+
+<body>
+
+<h1>Painel La Casa da Pizza</h1>
+
+<div id="pedidos"></div>
+
+<script>
+
+let pedidos = JSON.parse(localStorage.getItem("pedidosLista")) || []
+
+let div = document.getElementById("pedidos")
+
+pedidos.forEach(p=>{
+
+let item = document.createElement("p")
+
+item.innerText = p
+
+div.appendChild(item)
+
+})
+
+</script>
+
+</body>
+
+</html>
