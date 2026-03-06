@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>La Casa da Pizza</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#8B0000">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="img/logo.png" class="logo">
+
+<h1>La Casa da Pizza</h1>
+
+<p>Aberto das 19h às 23h</p>
+
+</header>
+
+<section class="cardapio">
+
+<h2>🍕 Cardápio</h2>
+
+<div class="pizza">
+<h3>Margherita</h3>
+<p>Molho, mussarela, tomate, manjericão</p>
+<span>R$20,00</span>
+<button onclick="addCarrinho('Margherita',20)">Adicionar</button>
+</div>
+
+<div class="pizza">
+<h3>Calabresa</h3>
+<p>Molho, mussarela e calabresa</p>
+<span>R$20,00</span>
+<button onclick="addCarrinho('Calabresa',20)">Adicionar</button>
+</div>
+
+</section>
+
+<section class="carrinho">
+
+<h2>🛒 Carrinho</h2>
+
+<ul id="listaCarrinho"></ul>
+
+<p>Total: R$ <span id="total">0</span></p>
+
+<input id="cupom" placeholder="Cupom de desconto">
+
+<button onclick="aplicarCupom()">Aplicar Cupom</button>
+
+<button onclick="enviarPedido()">Enviar Pedido</button>
+
+</section>
+
+<section class="fidelidade">
+
+<h2>🎁 Fidelidade</h2>
+
+<div id="contadorPizza"></div>
+
+</section>
+
+<script src="app.js"></script>
+<script src="fidelidade.js"></script>
+
+</body>
+</html>
