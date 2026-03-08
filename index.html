@@ -1,78 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - La Casa da Pizza</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .container {
+            max-width: 800px;
+            margin: auto;
+            border: 2px solid #333;
+            padding: 30px;
+            background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px; /* Efeito de textura leve */
+        }
 
-<title>La Casa da Pizza</title>
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-<link rel="stylesheet" href="style.css">
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+            border-bottom: 4px solid #cc0000;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-<link rel="manifest" href="manifest.json">
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
 
-<meta name="theme-color" content="#8B0000">
+        .categoria-titulo {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
 
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .nome {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .preco {
+            color: #cc0000;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .ingredientes {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .doces {
+            margin-top: 30px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        .contato {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #cc0000;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+<div class="container">
+    <header>
+        <h1>CARDÁPIO</h1>
+        <p style="color: #cc0000; font-weight: bold;">LA CASA DA PIZZA</p>
+    </header>
 
-<img src="img/logo.png" class="logo">
+    <div class="menu-grid">
+        <div class="coluna">
+            <div class="item">
+                <div class="item-header"><span class="nome">O Professor</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Carne Moída, Bacon e Barbecue.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Lisboa</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Bacon e Abacaxi.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Berlim</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Pepperoni, Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Tóquio</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Atum, Cebola, Tomate, Azeitona e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Rio</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Calabresa, Cebola e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Nairóbi</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Frango, Catupiry e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Palermo</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Tomate, Manjericão e Orégano.</div>
+            </div>
+        </div>
 
-<h1>La Casa da Pizza</h1>
+        <div class="coluna">
+            <div class="item">
+                <div class="item-header"><span class="nome">Marselha</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Cogumelo, Presunto e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Denver</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Calabresa, Pimenta Calabresa e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Oslo</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Carne Seca, Cebola, Catupiry e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Estocolmo</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Presunto, Tomate, Azeitona e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Moscou</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Queijo Prato, Cheddar, Catupiry e Orégano.</div>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="nome">Bogotá</span><span class="preco">R$49,90</span></div>
+                <div class="ingredientes">Molho de Tomate, Mussarela, Carne Moída, Milho e Orégano.</div>
+            </div>
+        </div>
+    </div>
 
-<p>Aberto das 19h às 23h</p>
+    <div class="doces">
+        <div class="item-header"><span class="nome">Confete / Banana Nevada / Romeo e Julieta</span><span class="preco">R$39,90</span></div>
+        <div class="item-header" style="margin-top: 5px;"><span class="nome">Chocolate / Prestígio</span><span class="preco">R$39,90</span></div>
+    </div>
 
-</header>
-
-<section class="cardapio">
-
-<h2>🍕 Cardápio</h2>
-
-<div class="pizza">
-<h3>Margherita</h3>
-<p>Molho, mussarela, tomate, manjericão</p>
-<span>R$20,00</span>
-<button onclick="addCarrinho('Margherita',20)">Adicionar</button>
+    <div class="contato">
+        <strong>Peça por Delivery: (61) 9 9879-1411</strong><br>
+        <small>Qs 10 conjunto 210c - Areal</small>
+    </div>
 </div>
-
-<div class="pizza">
-<h3>Calabresa</h3>
-<p>Molho, mussarela e calabresa</p>
-<span>R$20,00</span>
-<button onclick="addCarrinho('Calabresa',20)">Adicionar</button>
-</div>
-
-</section>
-
-<section class="carrinho">
-
-<h2>🛒 Carrinho</h2>
-
-<ul id="listaCarrinho"></ul>
-
-<p>Total: R$ <span id="total">0</span></p>
-
-<input id="cupom" placeholder="Cupom de desconto">
-
-<button onclick="aplicarCupom()">Aplicar Cupom</button>
-
-<button onclick="enviarPedido()">Enviar Pedido</button>
-
-</section>
-
-<section class="fidelidade">
-
-<h2>🎁 Fidelidade</h2>
-
-<div id="contadorPizza"></div>
-
-</section>
-
-<script src="app.js"></script>
-<script src="fidelidade.js"></script>
 
 </body>
 </html>
